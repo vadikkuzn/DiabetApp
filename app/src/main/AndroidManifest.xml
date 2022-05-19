@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JavaLineChart">
-        <activity android:name=".EditUserActivity" />
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".UpdateSugarActivity" />
-        <activity android:name=".CalculatorActivity" />
-        <activity android:name=".AlarmActivity" />
-        <activity android:name=".AddSugarActivity" />
+        <activity android:name=".EditUserActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SignUpActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".SettingsActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".UpdateSugarActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".CalculatorActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".AlarmActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".AddSugarActivity" android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

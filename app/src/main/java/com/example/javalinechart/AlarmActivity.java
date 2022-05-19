@@ -142,7 +142,7 @@ public class AlarmActivity extends AppCompatActivity {
 
                 try {
                     Date date1 = dateBDformat.parse(cursor1.getString(1));
-                    stringData = shortDateFormat.format(date1.getTime());
+                    stringData = exportFormat.format(date1.getTime());
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -176,17 +176,21 @@ public class AlarmActivity extends AppCompatActivity {
 
                 Cursor cursor = myDB.readAllData();
                 while (cursor.moveToNext()) {
-                    String stringData = "";
+                    String stringData = "", stringData1="";
 
                     try {
                         Date date1 = dateBDformat.parse(cursor.getString(1));
                         stringData = shortDateFormat.format(date1.getTime());
+
+                        Date date11 = exportFormat.parse(sortedData.get(i));
+                        stringData1 = shortDateFormat.format(date11.getTime());
+
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
 
 
-                    if( sortedData.get(i).equals(stringData)) {
+                    if( stringData1.equals(stringData)) {
 
                         Date date1 = null;
                         try {

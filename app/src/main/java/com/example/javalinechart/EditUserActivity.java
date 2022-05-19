@@ -161,7 +161,7 @@ public class EditUserActivity extends AppCompatActivity {
                     //Добавление данных в БД
                     MyDB mydb = new MyDB(EditUserActivity.this);
 
-                    mydb.addUser(
+                    mydb.updateUser("1",
                             String.valueOf(name.getText()),
                             String.valueOf(lastName.getText()),
                             Integer.valueOf(age.getText().toString().trim()),
